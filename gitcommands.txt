@@ -1,10 +1,10 @@
 
-overview : local repo --> stage --> commit --> push -->remote repo
-NOTE: video 11 -- adding file not working
+OVERVIEW : local repo --> stage --> commit --> push -->remote repo
+ISSUES   : video 11 -- adding file not working
 
-1. crrate github repo
-2. mkdir mygit; cd mygit ; git init ; //  craate and initialise git local repo 
-3. git remote add mymaster https://<url>    // clone git repo to local repo
+1. create github repo
+2. mkdir mygit; cd mygit ; git init ; //  create and initialise git local repo 
+3. git remote add mymaster https://<url>    // clone git repo to local repo using https url--create issue later in push. step16 is solution
 4. git remote -v    // check how many repos are already synced with this local repo
 5. git remote remove <repo-name found using remote -v>     // delete any repo from local git 
 6. gedit <filename> ; git status ; git add <filename> ; // create file ; check status of staged/unstaged files . add file to staging/indez
@@ -34,5 +34,15 @@ NOTE: video 11 -- adding file not working
     copy content of ssh keyfile generated (/home/me/.ssh/id_rsa.pub)
     Goto <github-account> --> settings > SSH Key(left panel) > add SSH key > set Title to computername(Ubuntu12/Win7VM) > paste key below > Add key > Enter github password
     Goto <github-repo> , copy SSH url for cloning into local repo
-    NOW,use following command to clone repo using ssh url : git remote add mysshmaster git@github.com:ajitsraghav/learngit.git
 
+18. use following commands to clone and push to repo using ssh url : 
+	git remote add mysshmaster git@github.com:ajitsraghav/learngit.git
+	git remote -v
+	git status
+	git add --all
+	git commit -m "my first ssh commit"
+	git push mysshmaster master; // type yes for ssh authentication . files are pushed to remote repo now
+19. git branch; // shows git branches. green color with star means currently in this branch,i.e. it is active branch
+    git branch mybranch; // creates new branch 
+    git checkout mybranch; // switch to mybranch
+    git checkout -b mynewbranch; // create mynewbranch and switch to that branch in one command
