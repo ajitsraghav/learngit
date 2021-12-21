@@ -1,5 +1,5 @@
 
-overview : local repo --> stage --> commit --> remote repo
+overview : local repo --> stage --> commit --> push -->remote repo
 NOTE: video 11 -- adding file not working
 
 1. crrate github repo
@@ -12,4 +12,11 @@ NOTE: video 11 -- adding file not working
 8. git rm --cached <filename> ; //remove file from git local repo index, file will be shown as unstaged after this. nothing to commit
 9. git add --all ; // add all files to index
 10.  gedit .gitignore ; <write filenames to gnore. These files will not be indexed and commit>
-		Note : in order to add blank folders i git , add .gitignore file in the empty folder
+	Note : in order to add blank folders in git , add .gitignore file in the empty folder. otherwise Git ignores empty folder by default
+
+11. git config --global user.name "<githb-user>"; // set user name  configurations for commit
+    git config --global user.email "<github-email>"; // set user name  configurations for commit
+							
+12. git config --list; // shows current user for git commit
+13. git commit -m "my first commit" ;  // iniitial commit -- commit frst time -- commit is fone in local repo, not remote repo
+
