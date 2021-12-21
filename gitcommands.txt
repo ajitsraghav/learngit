@@ -21,3 +21,18 @@ NOTE: video 11 -- adding file not working
 12. git config --list; // shows current user for git commit
 13. git commit -m "my first commit" ;  // iniitial commit -- commit frst time -- commit is fone in local repo, not remote repo
 14. git log ; // shows commit changes done by which user and comit messages
+
+15. git remote -v; // check git local repo name   
+    git push mymaster master ; // push local repo "mymaster" to remote github repo with branch name as "master". 
+	Note: did not work with other remote-repo-name if it does not exist on remote github
+	Note: password authentication did not work, since 2021 git allows only Token authentication. Search this.
+	NOTE: USE STEP 16 instead, to avoid https git drawback(need to enter user passwrd for every commit)
+16. ssh-keygen -t rsa -C "ajitsraghav@gmail.com" ; // create ssh key for ur github
+	Note: press Enter 3 times, for default filename and empty passphrase
+
+17. ADD SSH KEY IN GITHUB REPO:
+    copy content of ssh keyfile generated (/home/me/.ssh/id_rsa.pub)
+    Goto <github-account> --> settings > SSH Key(left panel) > add SSH key > set Title to computername(Ubuntu12/Win7VM) > paste key below > Add key > Enter github password
+    Goto <github-repo> , copy SSH url for cloning into local repo
+    NOW,use following command to clone repo using ssh url : git remote add mysshmaster git@github.com:ajitsraghav/learngit.git
+
