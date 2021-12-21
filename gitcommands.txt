@@ -1,0 +1,15 @@
+
+overview : local repo --> stage --> commit --> remote repo
+NOTE: video 11 -- adding file not working
+
+1. crrate github repo
+2. mkdir mygit; cd mygit ; git init ; //  craate and initialise git local repo 
+3. git remote add mymaster https://<url>    // clone git repo to local repo
+4. git remote -v    // check how many repos are already synced with this local repo
+5. git remote remove <repo-name found using remote -v>     // delete any repo from local git 
+6. gedit <filename> ; git status ; git add <filename> ; // create file ; check status of staged/unstaged files . add file to staging/indez
+7. git status ; // chcekc git staged/unstaged files
+8. git rm --cached <filename> ; //remove file from git local repo index, file will be shown as unstaged after this. nothing to commit
+9. git add --all ; // add all files to index
+10.  gedit .gitignore ; <write filenames to gnore. These files will not be indexed and commit>
+		Note : in order to add blank folders i git , add .gitignore file in the empty folder
